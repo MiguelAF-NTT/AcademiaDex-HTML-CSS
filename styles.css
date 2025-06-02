@@ -54,6 +54,10 @@ section {
   padding: 5px 0;
   border-top: 2px solid #b1c0407e;
 }
+.section-news{
+    max-height: 200px;
+    overflow-x: auto;
+}
 section h2 {
   margin: 5px 0;
   font-weight: 550;
