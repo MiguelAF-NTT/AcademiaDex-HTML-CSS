@@ -1,128 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Hola Mundo</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Menu Item 1</a></li>
-                <li><a href="#about">Menu Item 2</a></li>
-                <li><a href="#contact">Menu Item 3</a></li>
-            </ul>
-        </nav>
+      <h1>Hola Mundo</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a class="nav-item" href="#home">Menu Item 1</a></li>
+          <li><a class="nav-item" href="#about">Menu Item 2</a></li>
+          <li><a class="nav-item" href="#contact">Menu Item 3</a></li>
+        </ul>
+      </nav>
     </header>
-    <section>
-        <article>
-            <h2>Mi noticia</h2>
-            <figure>
-                <img src="html5.jpg" alt="Imagen HTML">
-                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo harum eaque sed
-                    distinctio modi error alias? In at quod iusto nobis reiciendis, aspernatur minus aut reprehenderit
-                    laboriosam? Eveniet, consequatur! </figcaption>
-            </figure>
-            <figure>
-                <img src="css3.jpg" alt="Imagen CSS">
-                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo harum eaque sed
-                    distinctio modi error alias? In at quod iusto nobis reiciendis, aspernatur minus aut reprehenderit
-                    laboriosam? Eveniet, consequatur! </figcaption>
-            </figure>
-        </article>
-        </section>
+    <div class="main-layout">
+    <div class="sections"> <section>
+      <article>
+        <h2>Mi noticia</h2>
+        <figure>
+          <img src="html5.jpg" alt="Imagen HTML" />
+          <div class="image-info">
+            <figcaption>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quo
+              harum eaque sed distinctio modi error alias? In at quod iusto
+              nobis reiciendis, aspernatur minus aut reprehenderit laboriosam?
+              Eveniet, consequatur!
+            </figcaption>
+            <button class="button">Más información</button>
+          </div>
+        </figure>
+      </article>
     </section>
-    <section>
-        <h2>Mi Formulario</h2>
-        <form action="#" method="post">
-           <fieldset>
-                <legend>Datos personales</legend>
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required>
-                
-                <label for="apellidos">Apellidos:</label>
-                <input type="apellidos" id="apellidos" name="apellidos" placeholder="Escribe tus apellidos" required>
-                
-                <label for="telefono">Teléfono:</label>
-                <input type="text" id="telefono" name="telefono" placeholder="Escribe tu teléfono" required>
-                <label for="DNI">DNI:</label>
-                <input type="radio" id="DNI" name="DNI" >
-                <label for="NIE">NIE:</label>
-                <input type="radio" id="NIE" name="DNI" >
-                <label for="documento">Nº Documento:</label>
-                <input type="text" id="documento" name="documento" placeholder="documento" required>
-            </fieldset>
-            <fieldset>
-                <legend>Otros datos</legend>
-                <label for="hermanos">Número de hermanos/as:</label>
-                <input type="number" id="hermanos" name="hermanos" min="0" max="10" placeholder="Número de hermanos">
-                <fieldset>
-                    <legend>Deportes favoritos </legend>
-                    <ol>
-                        <li>
-                            <label for="futbol">Fútbol</label>
-                            <input type="checkbox" id="futbol" name="deporte" value="futbol">
-                        </li>
-                        <li>
-                            <label for="baloncesto">Baloncesto</label>
-                            <input type="checkbox" id="baloncesto" name="deporte" value="baloncesto">
-                        </li>
-                        <li>
-                            <label for="rugby">Rugby</label>
-                            <input type="checkbox" id="rugby" name="deporte" value="rugby">
-                        </li>
-                        <li>
-                            <label for="paddel">Paddel</label>
-                            <input type="checkbox" id="paddel" name="deporte" value="paddel">
-                        </li>
-                        <li>
-                            <label for="pelota_vasca">Pelota vasca</label>
-                            <input type="checkbox" id="pelota_vasca" name="deporte" value="pelota_vasca">
-                        </li>
-                    </ol>
-                </fieldset>
-            </fieldset>
-            <button type="reset">Reset Form</button>
-            <button type="submit">Enviar</button>
-    </section>
-    <section>
-        
-        <table>
-            <caption>Tabla de Usuarios</caption>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>Teléfono</th>
-                    <th>DNI</th>
-                    <th>Deportes</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Juan</td>
-                    <td>Pérez</td>
-                    <td>30567381</td>
-                    <td>12345678A</td>
-                    <td>Fútbol, Baloncesto</td>
-                </tr>
-                <tr>
-                    <td>Ana</td>
-                    <td>Gómez</td>
-                    <td>254728264</td>
-                    <td>87654321B</td>
-                    <td>Rugby, Paddel</td>
-                </tr>
-               
-            </tbody>
-        </table>
-        <aside>
-          <img src="publicity.png" alt="publicidad">
-        </aside>
-</body>
 
+    <section>
+      <h2>Mi Formulario</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Escribe tu nombre"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="apellidos">Apellidos</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Escribe tus apellidos"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input
+              type="text"
+              id="telefono"
+              name="telefono"
+              placeholder="Escribe tu teléfono"
+              required
+            />
+          </div>
+          <div class="form-group radio-group">
+            <input type="radio" id="DNI" name="tipo_documento" />
+            <label for="DNI">DNI</label>
+            </div>
+            <div class="form-group radio-group">
+            <input type="radio" id="NIE" name="tipo_documento" />
+            <label for="NIE">NIE</label>
+          </div>
+          <div class="form-group">
+            <label for="documento">Nº Documento</label>
+            <input
+              type="text"
+              id="documento"
+              name="documento"
+              placeholder="documento"
+              required
+            />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Otros datos</legend>
+          <div class="form-group"> <label for="hermanos">Número de hermanos/as</label>
+          <input
+            type="number"
+            id="hermanos"
+            name="hermanos"
+            min="0"
+            max="10"
+            placeholder="Número de hermanos"
+          /> </div>
+          <fieldset class="form-group fieldset-sports">
+            <legend>Deportes favoritos</legend>
+            <ol>
+              <li>
+                <label class="custom-checkbox"> 
+                 Fútbol
+                     
+                  <input
+                    type="checkbox"
+                    id="futbol"
+                    name="deporte"
+                    value="futbol"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="baloncesto"
+                    name="deporte"
+                    value="baloncesto"
+                  />
+                  <span class="checkmark"></span>
+                  Baloncesto
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="rugby"
+                    name="deporte"
+                    value="rugby"
+                  />
+                  <span class="checkmark"></span>
+                  Rugby
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="paddel"
+                    name="deporte"
+                    value="paddel"
+                  />
+                  <span class="checkmark"></span>
+                  Paddel
+                </label>
+              </li>
+              <li>
+                <label class="custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="pelota_vasca"
+                    name="deporte"
+                    value="pelota_vasca"
+                  />
+                  <span class="checkmark"></span>
+                  Pelota vasca
+                </label>
+              </li>
+            </ol>
+          </fieldset>
+        </fieldset>
+        <button type="reset">Reset Form</button>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <table>
+        <caption>
+          Tabla de Usuarios
+        </caption>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>DNI</th>
+            <th>Deportes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Juan</td>
+            <td>Pérez</td>
+            <td>30567381</td>
+            <td>12345678A</td>
+            <td>Fútbol, Baloncesto</td>
+          </tr>
+          <tr>
+            <td>Ana</td>
+            <td>Gómez</td>
+            <td>254728264</td>
+            <td>87654321B</td>
+            <td>Rugby, Paddel</td>
+          </tr>
+        </tbody>
+      </table>
+    </section> </div>
+    <aside>
+      <img src="publicity.png" alt="publicidad" />
+    </aside>
+</div>
+  </body>
 </html>
