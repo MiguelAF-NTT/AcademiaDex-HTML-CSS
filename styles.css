@@ -1,60 +1,60 @@
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Thin.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-ThinItalic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Light.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-LightItalic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Italic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-BoldItalic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-Black.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato';
-  src: url('assets/fonts/Lato-BlackItalic.ttf') format('truetype');
+  font-family: "Lato";
+  src: url("assets/fonts/Lato-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
@@ -66,11 +66,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Lato', Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
-
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
 }
 header {
   background-color: #d9d9d9;
@@ -107,23 +106,20 @@ nav {
   display: grid;
   grid-template-columns: 1fr;
   background-color: #d9d9d9;
-  align-items: center; 
+  align-items: center;
   justify-content: space-between;
 }
 .sections {
   background-color: white;
- 
- 
 }
 section {
- 
   margin-top: 5px;
   padding: 5px 0;
   border-top: 2px solid #b1c0407e;
 }
-.section-news{
-    max-height: 200px;
-    overflow-x: auto;
+.section-news {
+  max-height: 200px;
+  overflow-x: auto;
 }
 section h2 {
   margin: 5px 0;
@@ -137,7 +133,7 @@ figure {
 figure img {
   width: 30%;
   margin: 0 20px;
-  object-fit: cover ;
+  object-fit: cover;
 }
 .image-info {
   width: 70%;
@@ -213,7 +209,18 @@ input[type="checkbox"] {
   align-items: center;
   font-weight: 500;
 }
+.icon-checkbox::before {
+  font-family: "icomoon";
+  content: "\e901"; /* unchecked */
+  font-size: 16px;
+  color: #9aae04;
+  display: inline-block;
+  margin-left: 3px;
+}
 
+.custom-checkbox input[type="checkbox"]:checked + .icon-checkbox::before {
+  content: "\e900"; /* checked */
+}
 .custom-checkbox input[type="checkbox"] {
   opacity: 0;
   position: absolute;
@@ -224,42 +231,10 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-.custom-checkbox .checkmark {
-  position: absolute;
-  right: 0;
-  left: auto;
-  height: 20px;
-  width: 20px;
-  border: 2px solid #b1c040;
-
-  background: #fff;
-}
-
 .custom-checkbox input[type="checkbox"]:checked + .checkmark {
-  background-color: #b1c040;
+  /* background: url('assets/images/icons/i-checkbox-checked.svg') no-repeat center/contain; */
 }
 
-.custom-checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
-  display: block;
-}
-
-.custom-checkbox .checkmark:after {
-  left: 4px;
-  top: 0px;
-  width: 6px;
-  height: 12px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-  content: "";
-  position: absolute;
-}
 table {
   border-collapse: collapse;
   width: 100%;
@@ -283,7 +258,7 @@ caption {
   padding-bottom: 8px;
 }
 aside {
-margin: 0 ;
+  margin: 0;
 }
 aside img {
   width: 100%;
@@ -297,21 +272,18 @@ aside img {
   }
   .sections {
     padding-right: 40px;
-     border-right: 1px solid black;
-   
+    border-right: 1px solid black;
   }
   section {
     margin-left: 40px;
   }
   figure img {
     width: 20%;
-   
   }
   .image-info {
     width: 80%;
   }
-  aside{
+  aside {
     margin: 0 10px;
   }
-    
 }
