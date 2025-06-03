@@ -9,43 +9,51 @@
   </head>
 
   <body>
-    <header>
-      <h1>Hola Mundo</h1>
-      <nav>
-        <ul class="nav-list">
-          <li><a class="nav-item" href="#home">Menu Item 1</a></li>
-          <li><a class="nav-item" href="#about">Menu Item 2</a></li>
-          <li><a class="nav-item" href="#contact">Menu Item 3</a></li>
+    <header class="header">
+      <h1 class="header__title">Hola Mundo</h1>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#home">Menu link</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#about">Menu Item 2</a>
+          </li>
+          <li class="header__nav-item">
+            <a class="header__nav-link" href="#contact">Menu Item 3</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <div class="main-layout">
-      <div class="sections">
-        <section class="section-news">
-          <article>
-            <h2>Mi noticia</h2>
-            <figure>
-              <img src="html5.jpg" alt="Imagen HTML" />
-              <div class="image-info">
-                <figcaption>
+    <div class="layout">
+      <div class="layout__sections">
+        <section class="news">
+          <h2>Mi noticia</h2>
+          <article class="news__article">
+            <figure class="news__figure">
+              <img class="news__image" src="html5.jpg" alt="Imagen HTML" />
+              <div class="news__content">
+                <figcaption class="news__content-caption">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
                   quo harum eaque sed distinctio modi error alias? In at quod
                   iusto nobis reiciendis, aspernatur minus aut reprehenderit
                   laboriosam? Eveniet, consequatur!
                 </figcaption>
-                <button class="button">Más información</button>
+                <button class="news__content-button">Más información</button>
               </div>
-            </figure>
-            <figure>
-              <img src="css3.jpg" alt="Imagen CSS" />
-              <div class="image-info">
-                <figcaption>
+            </figure >
+          </article>
+          <article   class="news__article">
+            <figure class="news__figure">
+              <img class="news__image" src="css3.jpg" alt="Imagen CSS" />
+              <div class="news__content">
+                <figcaption class="news__content-caption">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
                   quo harum eaque sed distinctio modi error alias? In at quod
                   iusto nobis reiciendis, aspernatur minus aut reprehenderit
                   laboriosam? Eveniet, consequatur!
                 </figcaption>
-                <button class="button">Más información</button>
+                <button class="news__content-button">Más información</button>
               </div>
             </figure>
           </article>
@@ -53,12 +61,13 @@
 
         <section>
           <h2>Mi Formulario</h2>
-          <form action="#" method="post">
-            <fieldset>
-              <legend>Datos personales</legend>
-              <div class="form-group">
-                <label for="name">Nombre</label>
+          <form class="form" action="#" method="post">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Datos personales</legend>
+              <div class="form__group">
+                <label class="form__label" for="name">Nombre</label>
                 <input
+                  class="form__input"
                   type="text"
                   id="name"
                   name="name"
@@ -66,9 +75,10 @@
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="apellidos">Apellidos</label>
+              <div class="form__group">
+                <label class="form__label" for="apellidos">Apellidos</label>
                 <input
+                  class="form__input"
                   type="text"
                   id="apellidos"
                   name="apellidos"
@@ -76,9 +86,10 @@
                   required
                 />
               </div>
-              <div class="form-group">
-                <label for="telefono">Teléfono</label>
+              <div class="form__group">
+                <label class="form__label" for="telefono">Teléfono</label>
                 <input
+                  class="form__input"
                   type="text"
                   id="telefono"
                   name="telefono"
@@ -86,17 +97,27 @@
                   required
                 />
               </div>
-              <div class="form-group radio-group">
-                <input type="radio" id="DNI" name="tipo_documento" />
-                <label for="DNI">DNI</label>
-              </div>
-              <div class="form-group radio-group">
-                <input type="radio" id="NIE" name="tipo_documento" />
-                <label for="NIE">NIE</label>
-              </div>
-              <div class="form-group">
-                <label for="documento">Nº Documento</label>
+              <div class="form__group form__group--radio">
                 <input
+                  class="form__input-radio"
+                  type="radio"
+                  id="DNI"
+                  name="tipo_documento"
+                />
+                <label class="form__label" for="DNI">DNI</label>
+             
+                <input
+                  class="form__input-radio"
+                  type="radio"
+                  id="NIE"
+                  name="tipo_documento"
+                />
+                <label class="form__label" for="NIE">NIE</label>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="documento">Nº Documento</label>
+                <input
+                  class="form__input"
                   type="text"
                   id="documento"
                   name="documento"
@@ -105,11 +126,14 @@
                 />
               </div>
             </fieldset>
-            <fieldset>
-              <legend>Otros datos</legend>
-              <div class="form-group">
-                <label for="hermanos">Número de hermanos/as</label>
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Otros datos</legend>
+              <div class="form__group">
+                <label class="form__label" for="hermanos"
+                  >Número de hermanos/as</label
+                >
                 <input
+                  class="form__input"
                   type="number"
                   id="hermanos"
                   name="hermanos"
@@ -118,97 +142,98 @@
                   placeholder="Número de hermanos"
                 />
               </div>
-              <fieldset class="form-group fieldset-sports">
-                <legend>Deportes favoritos</legend>
-                <ol>
+              <fieldset class="form__fieldset form__fieldset--sports">
+                <legend class="form__legend">Deportes favoritos</legend>
+                <ol class="form__sports-list">
                   <li>
-                    <label class="custom-checkbox">
-                      Fútbol  
+                    <label class="form__checkbox">
+                      Fútbol
 
                       <input
+                        class="form__checkbox-input"
                         type="checkbox"
                         id="futbol"
                         name="deporte"
                         value="futbol"
                       />
-                      <span class="icon-checkbox "></span>
+                      <span class="form__icon-checkbox"></span>
                     </label>
                   </li>
                   <li>
-                    <label class="custom-checkbox">
-                        Baloncesto  
+                    <label class="form__checkbox">
+                      Baloncesto
                       <input
+                        class="form__checkbox-input"
                         type="checkbox"
                         id="baloncesto"
                         name="deporte"
                         value="baloncesto"
                       />
-                      <span class="icon-checkbox"></span>
-                      
+                      <span class="form__icon-checkbox"></span>
                     </label>
                   </li>
                   <li>
-                    <label class="custom-checkbox">
-                         Rugby
+                    <label class="form__checkbox">
+                      Rugby
                       <input
+                        class="form__checkbox-input"
                         type="checkbox"
                         id="rugby"
                         name="deporte"
                         value="rugby"
                       />
-                      <span class="icon-checkbox"></span>
-                     
+                      <span class="form__icon-checkbox"></span>
                     </label>
                   </li>
                   <li>
-                    <label class="custom-checkbox">
-                         Paddel 
+                    <label class="form__checkbox">
+                      Paddel
                       <input
+                        class="form__checkbox-input"
                         type="checkbox"
                         id="paddel"
                         name="deporte"
                         value="paddel"
                       />
-                      <span class="icon-checkbox"></span>
-                     
+                      <span class="form__icon-checkbox"></span>
                     </label>
                   </li>
                   <li>
-                    <label class="custom-checkbox">
-                         Pelota vasca 
+                    <label class="form__checkbox">
+                      Pelota vasca
                       <input
+                        class="form__checkbox-input"
                         type="checkbox"
                         id="pelota_vasca"
                         name="deporte"
                         value="pelota_vasca"
                       />
-                      <span class="icon-checkbox"></span>
-                     
+                      <span class="form__icon-checkbox"></span>
                     </label>
                   </li>
                 </ol>
               </fieldset>
             </fieldset>
-            <button type="reset">Reset Form</button>
-            <button type="submit">Enviar</button>
+            <button class="form__button" type="reset">Reset Form</button>
+            <button class="form__button" type="submit">Enviar</button>
           </form>
         </section>
 
         <section>
-          <table>
-            <caption>
+          <table class="user-table">
+            <caption class="user-table__caption">
               Tabla de Usuarios
             </caption>
-            <thead>
+            <thead class="user-table__head">
               <tr>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Teléfono</th>
-                <th>DNI</th>
-                <th>Deportes</th>
+                <th class="user-table__header">Nombre</th>
+                <th class="user-table__header">Apellidos</th>
+                <th class="user-table__header">Teléfono</th>
+                <th class="user-table__header">DNI</th>
+                <th class="user-table__header">Deportes</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="user-table__body">
               <tr>
                 <td>Juan</td>
                 <td>Pérez</td>
@@ -227,8 +252,8 @@
           </table>
         </section>
       </div>
-      <aside>
-        <img src="publicity.png" alt="publicidad" />
+      <aside class="layout__aside">
+        <img class="layout__ad-image" src="publicity.png" alt="publicidad" />
       </aside>
     </div>
   </body>

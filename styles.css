@@ -64,26 +64,24 @@
   margin: 0;
 }
 body {
-  
   margin: 0;
   padding: 0;
   font-family: "Lato", Arial, sans-serif;
   font-size: 14px;
 }
-header {
+.header {
   background-color: #d9d9d9;
   color: black;
   height: fit-content;
-  padding: 0 20px;
-  padding-bottom: 5px;
-
+  padding: 0 20px 5px 20px;
+  
 }
-nav {
+.header__nav {
   background-color: white;
   margin: 10px 0 0 0;
   width: fit-content;
 }
-.nav-list {
+.header__nav-list {
   border: 1px solid black;
   border-right: none;
   list-style-type: none;
@@ -91,16 +89,16 @@ nav {
   margin: 0;
   display: flex;
 }
-.nav-list li {
+.header__nav-item {
   border-right: 1px solid black;
   padding: 10px;
 }
-.nav-item {
+.header__nav-link {
   font-weight: 600;
   text-decoration: none;
   color: #b1c040;
 }
-.main-layout {
+.layout {
   width: 90%;
   margin: 0 auto;
   display: grid;
@@ -109,7 +107,7 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.sections {
+.layout__sections {
   background-color: white;
 }
 section {
@@ -117,7 +115,7 @@ section {
   padding: 5px 0;
   border-top: 2px solid #b1c0407e;
 }
-.section-news {
+.news {
   max-height: 200px;
   overflow-y: auto;
 }
@@ -125,29 +123,29 @@ section h2 {
   margin: 5px 0;
   font-weight: 550;
 }
-figure {
+.news__figure {
   display: flex;
   padding: 5px 0;
   gap: 10px;
 }
-figure img {
+.news__image {
   width: 30%;
   margin: 0 10px;
   object-fit: cover;
 }
-.image-info {
+.news__content {
   width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-figcaption {
+.news__content-caption {
   margin: 5px 10px;
   font-weight: 500;
   padding: 10px;
   background-color: #d9d9d9;
 }
-button {
+.news__content-button {
   background-color: #b1c040;
   color: white;
   border: 1px solid black;
@@ -156,53 +154,55 @@ button {
   margin: 0 10px 0 auto;
   margin-left: auto;
 }
-form {
+.form {
   max-width: 100%;
 }
-fieldset {
+.form__fieldset {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
- padding: 20px 10px 0 10px;
+  padding: 20px 10px 0 10px;
   margin-bottom: 10px;
 }
-label {
+.form__label {
   font-weight: 500;
   margin-bottom: 10px;
 }
-input[type="text"],
-input[type="number"] {
+.form__input {
   padding: 10px;
   border: 1px solid #b1c040;
 }
-legend {
+.form__input-radio {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+.form__legend {
   padding: 0 10px;
 }
-.fieldset-sports {
+.form__fieldset--sports {
   border: none;
   padding-top: 5px;
 }
-.form-group {
+.form__group {
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
 }
-.radio-group {
+.form__group--radio {
   gap: 5px;
   height: fit-content;
-  display: flex;
+  margin: 10px 5px;
   flex-direction: row;
   align-items: start;
 }
-.fieldset-sports ol {
+.form__sports-list {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-input[type="checkbox"] {
-  accent-color: #b1c040;
-}
-.custom-checkbox {
+
+.form__checkbox {
   position: relative;
   padding-left: 0px;
   padding-right: 30px;
@@ -212,7 +212,7 @@ input[type="checkbox"] {
   align-items: center;
   font-weight: 500;
 }
-.icon-checkbox::before {
+.form__icon-checkbox::before {
   font-family: "icomoon";
   content: "\e901"; /* unchecked */
   font-size: 16px;
@@ -221,10 +221,10 @@ input[type="checkbox"] {
   margin-left: 3px;
 }
 
-.custom-checkbox input[type="checkbox"]:checked + .icon-checkbox::before {
+.form__checkbox-input:checked + .form__icon-checkbox::before {
   content: "\e900"; /* checked */
 }
-.custom-checkbox input[type="checkbox"] {
+.form__checkbox-input {
   opacity: 0;
   position: absolute;
   left: 0;
@@ -234,14 +234,20 @@ input[type="checkbox"] {
   margin: 0;
 }
 
-.custom-checkbox input[type="checkbox"]:checked + .checkmark {
-  /* background: url('assets/images/icons/i-checkbox-checked.svg') no-repeat center/contain; */
+.form__button {
+  background-color: #b1c040;
+  color: white;
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin: 0 10px 0 auto;
+  
 }
 
-table {
+.user-table {
   border-collapse: collapse;
-  max-width: 100%;
-  font-size: .7rem;
+  width: 100%;
+  font-size: 0.7rem;
 }
 
 th,
@@ -250,51 +256,49 @@ td {
   padding: 6px;
 }
 
-thead th {
+.user-table__header {
   background-color: #b1c040; /* verde */
   color: black;
 }
 
-caption {
+.user-table__caption {
   text-align: left;
   caption-side: top;
   font-weight: bold;
   padding-bottom: 8px;
 }
-aside {
+.layout__aside {
   margin: 0;
 }
-aside img {
+.layout__ad-image {
   width: 100%;
   height: auto;
   display: block;
 }
 @media screen and (min-width: 768px) {
-    body{
+  body {
     font-size: 16px;
-    }
+  }
 
-  .sections {
+  .layout__sections {
     padding-right: 20px;
     border-right: 1px solid black;
   }
   section {
     margin-left: 20px;
   }
-  figure img {
+  .news__image {
     width: 40%;
     margin: 0 20px;
   }
-  .image-info {
+  .news__content {
     width: 60%;
   }
-  fieldset {
-    padding: 20px 40px 0 40px;
+ 
+  .header {
+    padding: 0 40px 5px 40px;
   }
-  header {
-    padding: 0 40px;
-  }
-  table{
+  .user-table {
     font-size: 1rem;
   }
   th,
@@ -303,24 +307,24 @@ aside img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .main-layout {
+  .layout {
     grid-template-columns: 80% auto;
     width: 100%;
   }
-  .sections {
+  .layout__sections {
     padding-right: 40px;
     border-right: 1px solid black;
   }
   section {
     margin-left: 40px;
   }
-  figure img {
+  .news__image {
     width: 20%;
   }
-  .image-info {
+  .news__content {
     width: 80%;
   }
-  aside {
+  .layout__aside {
     margin: 0 10px;
   }
 }
